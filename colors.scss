@@ -1,0 +1,130 @@
+:root {
+    --sidebar: rgb(38, 40, 53);
+    --main-bg: #191a20;
+    --body-bg: #13131f;
+}
+
+@mixin circle {
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@mixin icon {
+    font-size: 2em;
+    color: white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #22242d;
+}
+
+.sidebar {
+    width: 100px;
+    height: 100vh;
+    background-color: var(--sidebar);
+    position: fixed;
+
+    .circle {
+        @include circle();
+        background-color: #1f2129;
+
+        svg {
+            @include icon();
+        }
+
+        span {
+            display: none;
+            font-size: 2em;
+        }
+    }
+}
+
+main {
+    margin-left: 100px;
+    color: var(--sidebar);
+    font-weight: 700;
+
+    h1 {
+        padding: 25px;
+        background-color: var(--main-bg);
+        color: white;
+        font-weight: 700;
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 25px;
+    }
+
+    & > p {
+        margin: 25px 25px 0 25px;
+        padding: 25px;
+        background-color: #0e0e16;
+        border-radius: 25px;
+    }
+
+    .grid {
+        padding: 25px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+
+        section {
+            background-color: #0e0e16;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 50px;
+            border-radius: 25px;
+
+            button {
+                background-color: var(--main-bg);
+                border: none;
+                font-size: 1.2em;
+                color: white;
+                border-radius: 5px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus-margin {
+    margin: 25px;
+}
+
+#logo {
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        .grid {
+            grid-template-columns: auto;
+        }
+
+        section {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}

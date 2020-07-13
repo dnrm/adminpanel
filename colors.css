@@ -1,0 +1,132 @@
+:root {
+  --sidebar: rgb(38, 40, 53);
+  --main-bg: #191a20;
+  --body-bg: #13131f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #22242d;
+}
+
+.sidebar {
+  width: 100px;
+  height: 100vh;
+  background-color: var(--sidebar);
+  position: fixed;
+}
+
+.sidebar .circle {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #1f2129;
+}
+
+.sidebar .circle svg {
+  font-size: 2em;
+  color: white;
+}
+
+.sidebar .circle span {
+  display: none;
+  font-size: 2em;
+}
+
+main {
+  margin-left: 100px;
+  color: var(--sidebar);
+  font-weight: 700;
+}
+
+main h1 {
+  padding: 25px;
+  background-color: var(--main-bg);
+  color: white;
+  font-weight: 700;
+}
+
+main img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 25px;
+}
+
+main > p {
+  margin: 25px 25px 0 25px;
+  padding: 25px;
+  background-color: #0e0e16;
+  border-radius: 25px;
+}
+
+main .grid {
+  padding: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+}
+
+main .grid section {
+  background-color: #0e0e16;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+main .grid section button {
+  background-color: var(--main-bg);
+  border: none;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plus-margin {
+  margin: 25px;
+}
+
+#logo {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  main .grid {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  main section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+/*# sourceMappingURL=colors.css.map */
